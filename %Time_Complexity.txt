@@ -1,0 +1,37 @@
+/*
+-Time complexity:it quantifies the amount of time taken by a program to run as a function of length of the input.
+-jaise jaise hamare input ka size change hoga toh waise waise kis prakaar hamare algorithm ka running time change hoga.
+-Running Time-Linear , Quadratic, Cubic.
+For example-
+    suppose look at this below code-
+        int n;
+        cin>>n;
+        int a=0;
+        for(int i=1;i<=n;i++){
+            a+=1;
+        }
+        ->Now samajh ki iss loop main 'a' main sum kitni baar hoga, jitni baar loop run hoga? 
+            for i=1,1->n 
+                i=2,2->n...
+        i.e. n times on a single run.So, by this we can deduce that the 'i' is directly proportional to 'n' so, its time complexity can be said to be linear.
+    now look at this below code-
+        int n;
+        cin>>n;
+        int a=0;
+        for(int i=1;i<=n;i++){
+            for (int j=1;j<=n;j++)
+            {
+                a+=1;
+            }
+        } 
+        i=1,j=1 to n i.e. n times
+        i=2,j=1 to n i.e. n times
+        i=3,j=1 to n i.e. n times
+
+        n times n run hoga that is n*n(Quadratic time complexity)
+
+-Space complexity:it quantifies the amount of time taken by a program to run as an function of length of the input.
+-In simple words, jo proram kam jagah lega aur phir bhi utna hi kaam karlega woh program efficient hain.
+        worst case()
+        -supp
+*/

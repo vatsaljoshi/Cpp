@@ -1,0 +1,196 @@
+NOTE-Here '...' these 3 dots mean that the content is due to be written.And when this file will be completet then i will remove this note.
+
+Introduction-
+C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This C++ tutorial adopts a simple and practical approach to describe the concepts of C++ for beginners to advanded software engineers.
+
+Why to or advantages of cpp?
+-Close to hardware so it is better and efficient in its working , memory management is better, and a robust software developement.
+-It helps in doing object oriented programming.
+-Most widely used language in the world.
+-It helps you understand the concepts of compiler, linker, datatype's, classes, variable and their scopes and many things which not everly language offers.
+
+What are the applications of cpp?
+-Software development
+-Programming languages development.
+-Game development.
+-Embedded system.
+
+What is a program?
+-It is an set of instructions given to the computer to do some specific task.
+
+What is a algorithm?
+-An algorithm is an steps of program in our own understandable language.
+
+Keywords-Reserved set of word in a language which have some specific presetted meaning. eg. int, float, for, while, break....
+
+Tokens-small individual units of an program.Like keywords, identifiers,operators, literals and punctuators.
+
+Identifiers-Names given to variables, arrays, functions, structures, etc. to give them an identity.
+    Rules of naming variables-
+        1.Allowed-
+            -alphabets, digits, and underscores.
+            -lowercases and uppercases.
+        2.Not allowed-
+            -starting with a digit.
+            -spaces in between.
+            -can not be a keyword.
+            -special characters like $, @,-. etc.
+
+Literals-Values given to variables.
+for example- int a=10;
+                here int is keyword, a is identifier and the value 10 is literal of type integer.
+    types of literal-integer, float, character, double.
+
+Punctuators- , ; : () [] {} . @ 
+
+Precedence and Associativity-
+Precedence is the order of execution of operators.And the associativity is the direction of the execution of the operators either LEFT TO RIGHT(in most of the cases) or right to left(don't know the exceptions).
+    1st priority- * / %
+    2nd priority- + -
+
+Operators- symbols which define some operation.But before understanding that you must know what it operates on, and those are called 'operand'.
+    For example- a+b
+                 here 'a' and 'b' are operands and '+' is the operator.
+    Types of operator:
+    ->on the basis of number of operands- Unary, Binary, Ternary.
+        1.Unary- ...
+        2.Binary- ...
+        3.Ternary- ...
+
+    ->on the basis of nature of operator.
+    1.Arithematic operator-used for arithematic/mathematical operation.
+        These are- + - * / %(modulus)
+            not going to explain them all, but the things which have changed are / and % .
+                / it gives quotient.like int (5/2)=2.
+                Note-It does not work on float so if either of the numerator or denominator is float then an error is thrown.
+                Also, if the numerator is less than denominator then the answer comes out to be 0. 5/10=0
+
+                %(Modulas operator)-It gives out the remainder of the operation.
+                for example, 5%2=1
+                             but 5%10=5(because numerator is less than denominator)
+    2.Assignment operator- '=' used to assign value to an variable.
+        Here, do not confuse intitialization with assignment.
+            Initialization-> it is giving value at the time of declaration.
+                        int a=10;
+            Assignment-> it is changing that pre-assigned value other than the declaration step.
+                        a=15;
+    3.Relational Operator- it tells about the relation or comparison between two values.
+        - >, < , >= , <= , == , !=
+
+    4.Logical Operator-used to join two conditions or for negation.
+        - &&{and} , ||{or} , !{not}
+        Works on the basis of truth table.But here are my shortcuts:
+            -for &&:
+                    -if either of them is 'false' then the result is false.otherwise 'true'.
+            -for ||:
+                    -if either is 'true', then the result is true.otherwiese 'false'.
+            -for !:
+                    - !true = false
+                    - !false = true
+        Note- Precedence-> ! -> && -> ||
+            -Non-zero(!0) ke liye true.
+            -Zero(0) ke liye false.
+    5.Increament(++) or Decreament(--) - increasing/decreasing the value of an variable by 1 .
+        two types of expression- prefix or postfix.
+            -Prefix- Evaluating before expression.
+                    ++a , --a
+                Code:
+                    int a=5 ,b;
+                    b=++a;
+                    cout<<a<<b;
+                Output:
+                    6 6
+            -Postfix- Evaluating after expression.
+                    a++ , a--
+                Code:
+                    int a=5 ,b;
+                    b=a++;
+                    cout<<a<<b;
+                Output:
+                    6 5
+
+    Note-Exception of associativity.When there is a combination of post and pre-fix in an print statement then the associativity for that case is right to left.
+        Code:   
+            int a=5;
+            cout<<++a<<a++
+            cout<<endl;
+            cout<<a+=<<+=a;
+
+        Output:
+            7 5
+            6 6
+
+Ascii value's-The american standard code for information interchange.
+    General Ascii values:
+    A-65,B-66,C-67....,Z-90
+    a-97,b-98,c-99....,z-122
+    0-48,1-49,2-50,....9-57
+
+    if you just print out an character than you will get the ascii value of it.
+    Code:
+        char a;
+        cout<<"Enter a character:";
+        cin>>a;
+        cout<<int(a);
+    Output:
+        122
+    Also, Look at below for vice-versa scenario-
+    Code:
+        int a;
+        cout<<"Enter a ascii value:";
+        cin>>a;
+        cout<<char(a);
+    Output:
+        "--whatever ascii value user inputted--"
+
+Constant and Variable-Value of variable can be initialized, or modified.But an constant is constant, never-changing.
+
+    Define- to constantize an variable
+    At the beginning, you can use the define keyword to fix the value of an variable(it also works as an declaration).
+    Syntax:
+        -#define variable_name value
+        or,
+        -#Const datatype variable_name value 
+        maybe above one don't work so try this one, 
+        #Const variable_name value
+
+    For example, 
+        #include...
+        #define a 5 
+    
+    Note-Once defined, cannot be altered until removed the line of code.
+         
+Reference(&)- Alias name/Alternate name of an declared variable.
+        Code example:
+            int a=10;
+            int &b=a;
+            b=50;
+            cout<<a<<" "<<b;
+        Output:
+            50 50
+
+enum(enumeration)-it is used to declare a series of constant.
+    -Default case:
+    enum abc{A,B,C}
+        and if you know print the value of A, B, and c you get 0,1,2
+    -enum abc{P=10,Q,R}
+        Output: P=10,Q=11,R=12
+    -enum abc{m , n=5, o}
+        Output: m=0,n=5,0=6
+    -An classic example for understanding the concept:
+    Code:
+            enum color{RED, GREEN,BLUE};
+            int a=RED;
+                cout<<a;
+            int b=GREEN+BLUE;
+                cout<<b;
+            Output:0 3
+
+Typedef-Type definition.It is used to declare alias name of an datatype.
+    For example: typedef int vatsal;
+                  vatsal x , y;
+                
+                This above example created 2 variables of datatype int but with the alias name of int.
+
+Programming:The process of creating programs.
+    Components of programming-Sequential(executing everything plainly without any conditions or repeitions), Selection(if else ,and switch case), Iteration(Loops-for, while, do while), Transfer(goto break continue).

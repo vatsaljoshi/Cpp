@@ -1,0 +1,18 @@
+Datatypes in cpp(orr any language):It defines the type of data a variable can hold (or store).
+
+There are 3 categories of datatypes:
+    1.Fundamental-Also known as implicit, primitive,pre-defined.
+        Types- int, float, char, double, void .
+        
+        Fundamental datatypes and their storage capacities.
+            DATATYPE                                RANGE                                             BYTES
+            -int                                -32768 to +32767                                        2        
+            -float                  -3.4 * 10 to power 38 to 3.4 *10 to power 38                        4
+            -char                                   -128 to +127                                        1 
+            -double                 -1.7* 10 to power 308 to 1.7 *10 to power 308                       8
+            -void                                    null                                              null
+
+    2.Derived-
+        Types-Array, function, pointers, reference, constant.
+    3.User-defined-
+        Types-Class, struct, union, enum, typedef.
